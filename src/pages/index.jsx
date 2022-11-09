@@ -5,7 +5,7 @@ import Services from "../components/Services"
 import Process from "../components/Process"
 import Testimonials from "../components/Testimonials"
 import AboutMe from "../components/AboutMe"
-import BackToTop from "../components/BackToTop"
+// import BackToTop from "../components/BackToTop"
 import Layout from "../components/layout/Layout"
 import "../styles/globals.css"
 import DeliveringResults from "../components/DeliveringResults"
@@ -23,7 +23,7 @@ export const Head = () => (
 export default function Home() {
   return (
     <Layout>
-      <BackToTop></BackToTop>
+      {/* <BackToTop></BackToTop> */}
       <Hero></Hero>
       <DarkSection></DarkSection>
       <Services></Services>
