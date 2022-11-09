@@ -1,0 +1,27 @@
+.testimonialBox {
+  border: 1px dotted lightgray !important;
+  background-color: transparent !important;
+  border-radius: 20px;
+  position: relative;
+  --stack-align: center;
+  font-size: 14px;
+}
+
+.testimonialBox > *:nth-child(1) {
+  line-height: 0.7;
+  font-size: calc(var(--s5) + 2rem);
+}
+
+.testimonialBox::before {
+  content: url(../../static/images/qoute.svg);
+  content: "";
+  background-image: url(../../static//images/qoute.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -55px;
+  left: -18px;
+  z-index: 99;
+}

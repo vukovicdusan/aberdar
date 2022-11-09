@@ -1,0 +1,18 @@
+.footer {
+  background-color: #f5f5f5;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between !important;
+}
+
+.footerBottom > * {
+  display: flex;
+}
+.footerBottom > *:nth-child(2),
+.footerBottom > *:nth-child(3) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

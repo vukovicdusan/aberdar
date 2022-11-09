@@ -1,0 +1,3 @@
+.fishImg {
+  margin-block-start: clamp(5%, 15rem, 25%);
+}

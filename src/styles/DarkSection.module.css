@@ -1,0 +1,16 @@
+.mainStackLeft {
+  --stack-justify: space-between;
+}
+
+.slingshotStack {
+  --stack-justify: space-between;
+  --stack-align: center;
+}
+
+.slingshotStack > * + * {
+  --stack-space: 5rem !important;
+}
+
+.slingshotSubStack {
+  --stack-align: flex-start !important;
+}

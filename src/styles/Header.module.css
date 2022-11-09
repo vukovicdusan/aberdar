@@ -1,0 +1,8 @@
+.headerWrap {
+  --wrap-justify: flex-start;
+  padding-block: var(--s0);
+}
+
+.headerWrap h1 {
+  font-family: var(--black);
+}

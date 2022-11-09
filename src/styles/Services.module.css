@@ -1,0 +1,21 @@
+.chairSwitcher {
+  min-inline-size: 100%;
+  --switcher-gap: var(--s5) !important;
+}
+
+.chairSwitcher > * {
+  flex-basis: calc((33rem - 100%) * 999);
+}
+
+.chairMediumText {
+  font-size: var(--s2);
+}
+
+@supports (width: min(300px, 100%)) {
+  .servicesGrid {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(min(300px, 100%), 1fr)
+    ) !important;
+  }
+}

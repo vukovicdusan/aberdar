@@ -1,0 +1,9 @@
+.serviceTitle {
+  font-family: var(--bold);
+  text-decoration: underline;
+  text-decoration-color: var(--main);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+.serviceContent {
+}

@@ -1,0 +1,700 @@
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+/*===================*/
+/** ==== MODULAR SCALE ==== */
+:root {
+  --ratio: 1.2;
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+
+  /** ==== VARIABLES ==== */
+
+  --main: #fbdd00;
+  /* --accent: #2b2118; */
+  --secondary: #f2545b;
+  --text-dark: #1c2334;
+  --text-light: #f8f8ff;
+  --text-gray: #bcbcbc;
+  --background-dark: #000;
+  --background-light: #fff;
+  --color-shadow: rgba(23, 11, 41, 0.12);
+  --box-shadow: 0 2px 10px var(--color-shadow);
+  --ultralight: "neue_machinaultralight", Times, serif;
+  --light: "neue_machinalight", Times, serif;
+  --regular: "neue_machinaregular", Times, serif;
+  --medium: "neue_machinamedium", Times, serif;
+  --bold: "neue_machinabold", Times, serif;
+  --ultrabold: "neue_machinaultrabold", Times, serif;
+  --black: "neue_machinablack", Times, serif;
+}
+/** ==== RESET ====*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  color: var(--text-dark);
+  text-decoration-color: var(--main);
+  text-underline-offset: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+a:hover,
+.navlink-active {
+  text-decoration: underline;
+  /* color: var(--main); */
+  text-decoration-color: var(--main);
+  text-underline-offset: 2px;
+}
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit ../fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button:disabled {
+  cursor: auto;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/** ==== RESET UP ====*/
+
+/* === FONTS === */
+@font-face {
+  font-family: "neue_machinaultralight";
+  src: url("../../static/fonts/neuemachina-ultralight-webfont.woff2")
+      format("woff2"),
+    url("../../static/fonts/neuemachina-ultralight-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "neue_machinalight";
+  src: url("../../static/fonts/neuemachina-light-webfont.woff2") format("woff2"),
+    url("../../static/fonts/neuemachina-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "neue_machinaregular";
+  src: url("../../static/fonts/neuemachina-regular-webfont.woff2")
+      format("woff2"),
+    url("../../static/fonts/neuemachina-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "neue_machinamedium";
+  src: url("../../static/fonts/neuemachina-medium-webfont.woff2")
+      format("woff2"),
+    url("../../static/fonts/neuemachina-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "neue_machinabold";
+  src: url("../../static/fonts/neuemachina-bold-webfont.woff2") format("woff2"),
+    url("../../static/fonts/neuemachina-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "neue_machinaultrabold";
+  src: url("../../static/fonts/neuemachina-ultrabold-webfont.woff2")
+      format("woff2"),
+    url("../../static/fonts/neuemachina-ultrabold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "neue_machinablack";
+  src: url("../../static/fonts/neuemachina-black-webfont.woff2") format("woff2"),
+    url("../../static/fonts/neuemachina-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: var(--regular), Times sans-serif;
+  color: var(--text-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  max-width: 35ch;
+  font-family: var(--ultralight), Times, serif;
+  line-height: 1.1;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: var(--s4);
+}
+h2 {
+  font-size: var(--s4);
+}
+h3 {
+  font-size: var(--s2);
+}
+h4 {
+  font-size: var(--s1);
+}
+h5 {
+  font-size: var(--s0);
+}
+h6 {
+  font-size: var(--s0);
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: var(--s2);
+  }
+  h2 {
+    font-size: var(--s2);
+  }
+  h3 {
+    font-size: var(--s1);
+  }
+  h4 {
+    font-size: var(--s0);
+  }
+  h5 {
+    font-size: var(--s0);
+  }
+  h6 {
+    font-size: var(--s0);
+  }
+  body {
+    font-size: var(--s-1);
+  }
+}
+
+:focus {
+  outline: 1px solid var(--main);
+  outline-offset: 0.25rem;
+}
+
+input,
+select,
+textarea {
+  padding: 0.6rem;
+  border: none;
+  border-bottom: 1px solid var(--text-gray);
+  min-inline-size: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+.textarea {
+  background-attachment: local;
+  background-image: linear-gradient(to right, white 10px, transparent 10px),
+    linear-gradient(to left, white 10px, transparent 10px),
+    repeating-linear-gradient(
+      white,
+      white 30px,
+      var(--text-gray) 30px,
+      var(--text-gray) 31px,
+      white 31px
+    );
+  background-position: -10px 11px;
+  background-repeat: no-repeat;
+  line-height: 31px;
+  border-bottom: none;
+  min-inline-size: 105%;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.select::after {
+  content: "";
+  /* background-image: url('../public/img/chevron-down.svg'); */
+  right: 15px;
+  top: 45%;
+  transform: translateY(-50%);
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  pointer-events: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border-block-end: 1px solid var(--primary);
+  -webkit-text-fill-color: inherit;
+  /* -webkit-box-shadow: 0 0 0px 1000px var(--background-light) inset; */
+  /* transition: background-color 5000s ease-in-out 0s; */
+}
+
+label {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+}
+
+/* section {
+  margin-bottom: 4rem;
+  margin-bottom: clamp(2.67rem, 2.07rem + 3vw, 4.21rem);
+} */
+
+::placeholder {
+  color: var(--text-gray);
+}
+
+/* === UTILITIES === */
+.wrapper {
+  width: 70vw;
+  width: clamp(16rem, 93vw, 75rem);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+  padding-right: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+  position: relative;
+}
+
+.region {
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  padding-top: clamp(2.67rem, 2.07rem + 3vw, 4.21rem);
+  padding-bottom: clamp(1.67rem, 1.07rem + 1.5vw, 3.21rem);
+}
+
+.full-bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.display-none {
+  display: none !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mr-bs-1 {
+  margin-block-start: var(--s0, 1rem) !important;
+}
+
+.mr-bs-2 {
+  margin-block-start: var(--s2, 2rem) !important;
+}
+
+.mr-bs-4 {
+  margin-block-start: var(--s4, 3rem) !important;
+}
+
+.mr-b-auto {
+  margin-block: auto !important;
+}
+
+.mr-i-auto {
+  margin-inline: auto;
+}
+
+.text-jumbo {
+  font-size: calc(var(--s5) + 4rem);
+}
+
+.text-big {
+  font-family: var(--medium) !important;
+  font-size: var(--s4) !important;
+}
+
+@media (max-width: 1150px) {
+  .text-jumbo {
+    font-size: calc(var(--s5) + 2rem);
+  }
+}
+
+@media (max-width: 750px) {
+  .text-big {
+    font-size: var(--s2);
+  }
+}
+
+.text-light {
+  color: var(--text-light);
+}
+
+.text-main {
+  color: var(--main);
+}
+
+.text-gray {
+  color: var(--text-gray) !important;
+}
+
+.text-bold {
+  font-family: var(--bold);
+}
+
+.background-dark {
+  background-color: #000;
+}
+
+.d-flex {
+  display: flex;
+}
+
+/** ==== BUTTON ==== */
+.button {
+  display: inline-block;
+  padding: var(--s-3, 0.8rem) var(--s-2, 2.5rem);
+  border: 1px solid var(--main);
+  border-radius: 50px;
+  color: var(--text-dark);
+  background-color: transparent;
+  cursor: pointer;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none !important;
+  text-transform: capitalize;
+  font-family: var(--black);
+  font-size: var(--s1);
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  border-color: var(--text-dark);
+  color: var(--main);
+}
+
+@media (max-width: 900px) {
+  .button {
+    padding-block: var(--s-4, 0.8rem);
+  }
+}
+
+/* === BACK TO TOP BUTTON === */
+.back-to-top {
+  background-color: transparent;
+  opacity: 0.3;
+  border: none;
+  display: block;
+  cursor: pointer;
+  position: fixed;
+  bottom: 4rem;
+  right: 2rem;
+  z-index: 99;
+  transition: all 0.3s ease;
+}
+
+.back-to-top:focus {
+  outline: none;
+}
+
+/** ==== STACK ==== */
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: var(--stack-justify, flex-start);
+  align-items: var(--stack-align, flex-start);
+}
+
+.stack > * {
+  margin-block: 0;
+}
+
+.stack > * + * {
+  --stack-space: var(--s0);
+  margin-block-start: var(--stack-space, --s0);
+}
+
+.big-stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: var(--stack-justify, flex-start);
+  align-items: var(--stack-align, flex-start);
+}
+
+.big-stack > * {
+  margin-block: 0;
+}
+
+.big-stack > * + * {
+  --stack-space: 5rem;
+  margin-block-start: var(--stack-space, --s0);
+}
+
+.stack-space-between {
+  --stack-justify: space-between;
+}
+/** ==== CENTER ==== */
+.center {
+  --measure: 100%;
+  box-sizing: content-box;
+  margin-inline: auto;
+  max-inline-size: var(--measure);
+}
+.center-inner {
+  box-sizing: content-box;
+  margin-inline: auto;
+  max-inline-size: var(--measure);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: var(--center-text, center);
+}
+
+.center-vertical {
+  min-block-size: var(--vertical-height, 100%);
+  display: flex;
+  justify-content: center;
+}
+
+/** ==== SWITCHER ==== */
+.switcher {
+  --switcher-gap: 15rem !important;
+  --switcher-gap: min(25vw, 15rem) !important;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--switcher-gap);
+}
+
+.switcher > * {
+  flex-grow: 1;
+  flex-basis: calc((30rem - 100%) * 999);
+}
+
+.switcher > :nth-last-child(n + 5),
+.switcher > :nth-last-child(n + 5) ~ * {
+  flex-basis: 100%;
+}
+
+/* === WRAP === */
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: var(--wrap-justify, center);
+  align-items: var(--wrap-align, center);
+  gap: var(--wrap-space, clamp(1.375rem, 1.2rem + 0.89vw, 2rem));
+}
+
+/* === GRID === */
+.grid {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+@supports (width: min(250px, 100%)) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+  }
+}
+
+/* === BOX === */
+.box {
+  padding: var(--s1);
+  border: 1px solid var(--main);
+  --color-light: var(--text-light);
+  --color-dark: var(--text-dark);
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+.box * {
+  color: inherit;
+}
+
+.box.invert {
+  color: var(--text-light);
+  background-color: var(--text-dark);
+}
+
+.box.transparent {
+  border: none;
+  background-color: transparent;
+}
+
+/* === SWIPER === */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding-block: 5rem;
+  padding-inline: 2rem;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: auto;
+  bottom: 0px;
+  left: auto;
+  right: auto;
+}
+
+.swiper-button-next {
+  left: 51%;
+}
+
+.swiper-button-prev {
+  right: 51%;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  width: 50px;
+  height: 50px;
+}
+
+.swiper-button-next::after {
+  content: url(../../static/images/chevron-right.svg);
+}
+.swiper-button-prev::after {
+  content: url(../../static/images/chevron-left.svg);
+}
+
+@media (min-width: 1000px) {
+  .swiper-slide-next {
+    transition: transform 0.4s ease !important;
+    transform: scale(1.1) !important;
+  }
+}
+
+/* === === */
