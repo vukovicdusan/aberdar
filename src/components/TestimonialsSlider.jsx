@@ -9,11 +9,12 @@ import testimonialsData from "../../static/TestimonialsData"
 import { Navigation } from "swiper"
 
 export default function TestimonialsSlider() {
-  let counter = 0
+  let counter = 1
 
   return (
     <Region>
       <Swiper
+        slidesPerView="auto"
         spaceBetween={50}
         loop={true}
         loopFillGroupWithBlank={true}
