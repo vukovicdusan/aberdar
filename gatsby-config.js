@@ -7,8 +7,4 @@
 module.exports = {
   /* Your site config here */
   plugins: [`gatsby-plugin-image`, `gatsby-plugin-sharp`],
-  siteMetadata: {
-    title: "Aberdar",
-    description: "Web Analytics Agency Website",
-  },
 }
