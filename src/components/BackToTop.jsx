@@ -21,7 +21,11 @@ const BackToTop = () => {
     })
   }
 
-  window.addEventListener("scroll", toggleVisible)
+  const isBrowser = typeof window !== "undefined"
+
+  if (isBrowser) {
+    window.addEventListener("scroll", toggleVisible)
+  }
   return (
     visible && (
       <button onClick={scrollToTop} className="back-to-top">
