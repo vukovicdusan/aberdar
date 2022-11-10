@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import DarkSection from "../components/DarkSection"
 import Hero from "../components/Hero"
 import Services from "../components/Services"
@@ -21,15 +21,44 @@ export const Head = () => (
   </>
 )
 export default function Home() {
+  const [mode, setMode] = useState()
+
+  const onSelectMode = mode => {
+    setMode(mode)
+  }
+
+  useEffect(() => {
+    // Add listener to update styles
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", e =>
+        onSelectMode(e.matches ? "dark" : "light")
+      )
+
+    // Setup dark/light mode for the first time
+    onSelectMode(
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light"
+    )
+
+    // Remove listener
+    return () => {
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .removeEventListener("change", () => {})
+    }
+  }, [])
+
   return (
     <Layout>
       <BackToTop></BackToTop>
-      <Hero></Hero>
+      <Hero mode={mode}></Hero>
       <DarkSection></DarkSection>
-      <Services></Services>
-      <Process></Process>
+      <Services mode={mode}></Services>
+      <Process mode={mode}></Process>
       <Testimonials></Testimonials>
-      <DeliveringResults></DeliveringResults>
+      <DeliveringResults mode={mode}></DeliveringResults>
       <AboutMe></AboutMe>
       <Contact></Contact>
     </Layout>

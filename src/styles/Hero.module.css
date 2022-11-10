@@ -1,16 +1,7 @@
-.heroSwitcher {
-  /* --switcher-gap: var(--s2) !important; */
-}
-
 .heroSwitcher > * {
   flex-grow: 1;
   flex-basis: calc((40rem - 100%) * 999) !important;
 }
-/*
-.heroSwitcher > :nth-last-child(n + 5),
-.heroSwitcher > :nth-last-child(n + 5) ~ * {
-  flex-basis: 100%;
-} */
 
 .heroGridMain,
 .heroGridSecondary {
@@ -21,12 +12,11 @@
   grid-template-columns: 1fr 1fr 1fr 1fr minmax(2rem, 4rem) minmax(2rem, 4rem);
   grid-template-rows: minmax(2rem, 8rem) 1fr 1fr;
   gap: 1rem;
+  margin-block-start: 2rem;
 }
 
 .heroGridMain h1 {
   color: var(--main);
-  /* font-size: calc(var(--s5) + 4rem); */
-  font-family: var(--ultralight);
   grid-column: 1 / 5;
   grid-row: 2;
 }
@@ -85,12 +75,6 @@
   text-decoration: underline;
 }
 
-@media (max-width: 1150px) {
-  /* .heroGridMain h1 {
-    font-size: calc(var(--s5) + 2rem);
-  } */
-}
-
 @media (max-width: 750px) {
   .heroGridMain {
     grid-template-rows: minmax(2rem, 5rem) 1fr 1fr;
@@ -102,9 +86,6 @@
   .heroGridMain div {
     grid-column: 4 / 7;
   }
-  /* .heroGridSecondary p {
-    font-size: var(--s2);
-  } */
 }
 
 @media (max-width: 450px) {

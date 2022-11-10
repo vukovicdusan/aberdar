@@ -1,8 +1,28 @@
+header {
+  min-inline-size: 100%;
+  position: fixed;
+  background: #fff;
+  box-shadow: var(--box-shadow);
+  z-index: 100;
+}
 .headerWrap {
   --wrap-justify: flex-start;
   padding-block: var(--s0);
 }
 
-.headerWrap h1 {
-  font-family: var(--black);
+.headerWrap > *:nth-child(1) {
+  flex: 0 1 10%;
+}
+
+/* @media (prefers-color-scheme: dark) {
+
+} */
+
+@media (max-width: 500px) {
+  .headerWrap {
+    --wrap-space: var(--s-3);
+  }
+  .headerWrap a {
+    font-size: var(--s-2);
+  }
 }

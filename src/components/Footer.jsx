@@ -9,7 +9,7 @@ import skype from "../../static/images/skype.svg"
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <footer>
       <Wrapper>
         <Region>
           <div>
