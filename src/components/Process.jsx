@@ -2,9 +2,18 @@ import React, { Fragment } from "react"
 import * as styles from "../styles/Process.module.css"
 import Region from "./layout/Region"
 import ListComponent from "../components/ListComponent"
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage, withArtDirection } from "gatsby-plugin-image"
 import listItems from "../../static/ListCompData"
-const Process = () => {
+const Process = props => {
+  const nodes = props.imgData.allFile.nodes
+  const img = nodes.filter(image => image.name === "riba")
+  const imgWhite = nodes.filter(image => image.name === "riba_bela")
+  const images = withArtDirection(getImage(img[0]), [
+    {
+      media: "(prefers-color-scheme: dark)",
+      image: getImage(imgWhite[0]),
+    },
+  ])
   return (
     <Fragment>
       <Region idProp={"process"}>
@@ -34,15 +43,11 @@ const Process = () => {
           </h2>
         </div>
         <div className="[ switcher ] [ mr-bs-4 ]">
-          <StaticImage
+          <GatsbyImage
             className={styles.fishImg}
-            src="../images/riba.png"
-            // width={250}
-            placeholder="blurred"
-            layout="fullWidth"
-            objectFit="contain"
+            image={images}
             alt="fish"
-          ></StaticImage>
+          ></GatsbyImage>
           <div className="[ stack ] [ big-stack ]">
             <p>
               Over the past decade, we have worked with businesses involved in a

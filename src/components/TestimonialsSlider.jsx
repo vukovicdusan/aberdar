@@ -9,8 +9,6 @@ import testimonialsData from "../../static/TestimonialsData"
 import { Navigation } from "swiper"
 
 export default function TestimonialsSlider() {
-  let counter = 1
-
   return (
     <Region>
       <Swiper
@@ -29,8 +27,8 @@ export default function TestimonialsSlider() {
           },
         }}
       >
-        {testimonialsData.map(testimonial => (
-          <SwiperSlide key={counter++}>
+        {testimonialsData.map((testimonial, index) => (
+          <SwiperSlide key={index}>
             <TestimonialBox
               initials={testimonial.initials}
               content={testimonial.content}

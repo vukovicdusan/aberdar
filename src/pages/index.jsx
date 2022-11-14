@@ -10,6 +10,8 @@ import Layout from "../components/layout/Layout"
 import "../styles/globals.css"
 import DeliveringResults from "../components/DeliveringResults"
 import Contact from "../components/Contact"
+import { graphql, useStaticQuery } from "gatsby"
+// import { GatsbyImage, getImage, withArtDirection } from "gatsby-plugin-image"
 
 export const Head = () => (
   <>
@@ -20,45 +22,62 @@ export const Head = () => (
     />
   </>
 )
-export default function Home() {
-  const [mode, setMode] = useState()
+export default function Home({ imgData }) {
+  // const [mode, setMode] = useState()
 
-  const onSelectMode = mode => {
-    setMode(mode)
-  }
+  // const onSelectMode = mode => {
+  //   setMode(mode)
+  // }
 
-  useEffect(() => {
-    // Add listener to update styles
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", e =>
-        onSelectMode(e.matches ? "dark" : "light")
-      )
+  // useEffect(() => {
+  //   // Add listener to update styles
+  //   window
+  //     .matchMedia("(prefers-color-scheme: dark)")
+  //     .addEventListener("change", e =>
+  //       onSelectMode(e.matches ? "dark" : "light")
+  //     )
 
-    // Setup dark/light mode for the first time
-    onSelectMode(
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light"
-    )
+  //   // Setup dark/light mode for the first time
+  //   onSelectMode(
+  //     window.matchMedia("(prefers-color-scheme: dark)").matches
+  //       ? "dark"
+  //       : "light"
+  //   )
 
-    // Remove listener
-    return () => {
-      window
-        .matchMedia("(prefers-color-scheme: dark)")
-        .removeEventListener("change", () => {})
+  //   // Remove listener
+  //   return () => {
+  //     window
+  //       .matchMedia("(prefers-color-scheme: dark)")
+  //       .removeEventListener("change", () => {})
+  //   }
+  // }, [])
+
+  const data = useStaticQuery(graphql`
+    query {
+      allFile {
+        nodes {
+          name
+          childImageSharp {
+            gatsbyImageData(
+              placeholder: BLURRED
+              layout: CONSTRAINED
+              transformOptions: { fit: CONTAIN }
+            )
+          }
+        }
+      }
     }
-  }, [])
+  `)
 
   return (
     <Layout>
       <BackToTop></BackToTop>
-      <Hero mode={mode}></Hero>
+      <Hero></Hero>
       <DarkSection></DarkSection>
-      <Services mode={mode}></Services>
-      <Process mode={mode}></Process>
+      <Services imgData={data}></Services>
+      <Process imgData={data}></Process>
       <Testimonials></Testimonials>
-      <DeliveringResults mode={mode}></DeliveringResults>
+      <DeliveringResults imgData={data}></DeliveringResults>
       <AboutMe></AboutMe>
       <Contact></Contact>
     </Layout>

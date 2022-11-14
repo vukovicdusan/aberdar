@@ -1,11 +1,22 @@
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage, withArtDirection } from "gatsby-plugin-image"
 import React from "react"
 import * as styles from "../styles/Services.module.css"
 import Service from "../components/Service"
 import servicesContent from "../../static/ServicesData"
 import Region from "./layout/Region"
 
-const Services = () => {
+const Services = props => {
+  const nodes = props.imgData.allFile.nodes
+
+  const img = nodes.filter(image => image.name === "stolica")
+  const imgWhite = nodes.filter(image => image.name === "stolica_bela")
+  const images = withArtDirection(getImage(img[0]), [
+    {
+      media: "(prefers-color-scheme: dark)",
+      image: getImage(imgWhite[0]),
+    },
+  ])
+
   return (
     <Region idProp={"services"}>
       <div className="big-stack">
@@ -43,19 +54,11 @@ const Services = () => {
               We offer a range of services to meet your specific needs:
             </p>
           </div>
-
-          <StaticImage
-            src="../images/stolica.png"
-            width={350}
-            placeholder="blurred"
-            layout="constrained"
-            objectFit="contain"
-            alt="chair"
-          ></StaticImage>
+          <GatsbyImage image={images} alt="stolica"></GatsbyImage>
         </div>
         <div className={`${styles.servicesGrid} [ grid ]`}>
-          {servicesContent.map(service => (
-            <Service key={service.id} service={service}></Service>
+          {servicesContent.map((service, index) => (
+            <Service key={index} service={service}></Service>
           ))}
         </div>
       </div>

@@ -2,13 +2,23 @@ import React, { Fragment } from "react"
 import Region from "./layout/Region"
 import listItems from "../../static/ListCompData"
 import ListComponent from "./ListComponent"
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage, withArtDirection } from "gatsby-plugin-image"
 import * as styles from "../styles/DeliveringResults.module.css"
 
-const DeliveringResults = () => {
+const DeliveringResults = props => {
+  const nodes = props.imgData.allFile.nodes
+  const img = nodes.filter(image => image.name === "zastava")
+  const imgWhite = nodes.filter(image => image.name === "zastava_bela")
+  const images = withArtDirection(getImage(img[0]), [
+    {
+      media: "(prefers-color-scheme: dark)",
+      image: getImage(imgWhite[0]),
+    },
+  ])
+
   return (
     <Fragment>
-      <Region>
+      <Region idProp={"results"}>
         <div>
           <h2 className="text-big">
             Delivering results with
@@ -43,13 +53,7 @@ const DeliveringResults = () => {
             </p>
             <button className="[ button ] [ mr-bs-4 ]">Book A Call Now</button>
           </div>
-          <StaticImage
-            src="../images/zastava.png"
-            placeholder="blurred"
-            layout="fullWidth"
-            objectFit="contain"
-            alt="flag"
-          ></StaticImage>
+          <GatsbyImage image={images} alt="flag"></GatsbyImage>
         </div>
       </Region>
     </Fragment>
