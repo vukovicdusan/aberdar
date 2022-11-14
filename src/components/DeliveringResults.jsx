@@ -53,7 +53,11 @@ const DeliveringResults = props => {
             </p>
             <button className="[ button ] [ mr-bs-4 ]">Book A Call Now</button>
           </div>
-          <GatsbyImage image={images} alt="flag"></GatsbyImage>
+          <GatsbyImage
+            objectFit="contain"
+            image={images}
+            alt="flag"
+          ></GatsbyImage>
         </div>
       </Region>
     </Fragment>
