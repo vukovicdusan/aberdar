@@ -1,12 +1,3 @@
-.chairSwitcher {
-  min-inline-size: 100%;
-  --switcher-gap: var(--s5) !important;
-}
-
-.chairSwitcher > * {
-  flex-basis: calc((33rem - 100%) * 999);
-}
-
 .chairMediumText {
   font-size: var(--s2);
 }

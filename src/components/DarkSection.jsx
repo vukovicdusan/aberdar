@@ -12,15 +12,15 @@ const DarkSection = () => {
         <Region>
           <div className="[ switcher ]">
             <div className={`${styles.mainStackLeft} [ stack ]`}>
-              <h2 className="[ text-light ] [ text-big ]">
+              <h2 className="[ text-secondary ] [ text-big ]">
                 Tired of shooting in the dark?
               </h2>
               <div className="stack">
-                <p className="text-light">
+                <p className="text-secondary">
                   Digital marketing only performs well when you know your web
                   data inside-out.
                 </p>
-                <p className="text-light">
+                <p className="text-secondary">
                   That's where we come in. We'll setup reliable website tracking
                   that includes:
                 </p>
@@ -36,7 +36,7 @@ const DarkSection = () => {
                 alt="slingshot"
               ></StaticImage>
               <div
-                className={`${styles.slingshotSubStack} [ text-light ] [ stack ]`}
+                className={`${styles.slingshotSubStack} [ text-secondary ] [ stack ]`}
               >
                 <h5 className="text-bold">Accurate Market Attribution</h5>
                 <p>
@@ -45,7 +45,7 @@ const DarkSection = () => {
                 </p>
               </div>
               <div
-                className={`${styles.slingshotSubStack} [ text-light ] [ stack ]`}
+                className={`${styles.slingshotSubStack} [ text-secondary ] [ stack ]`}
               >
                 <h5 className="text-bold">Detailed User Behaviour Tracking</h5>
                 <p>

@@ -51,7 +51,9 @@ const DeliveringResults = props => {
               Get in touch today to find out how our expert web analytics and
               data services can boost your business.
             </p>
-            <button className="[ button ] [ mr-bs-4 ]">Book A Call Now</button>
+            <a href="#contact" className="[ button ] [ mr-bs-4 ]">
+              Book A Call Now
+            </a>
           </div>
           <GatsbyImage
             objectFit="contain"

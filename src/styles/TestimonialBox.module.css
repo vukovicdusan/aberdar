@@ -13,9 +13,8 @@
 }
 
 .testimonialBox::before {
-  content: url(../../static/images/qoute.svg);
   content: "";
-  background-image: url(../../static//images/qoute.svg);
+  background-image: url(../../static/images/qoute.svg);
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;

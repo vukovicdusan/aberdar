@@ -1,4 +1,3 @@
-// import React, { useState, useEffect } from "react"
 import React from "react"
 import DarkSection from "../components/DarkSection"
 import Hero from "../components/Hero"
@@ -12,7 +11,6 @@ import "../styles/globals.css"
 import DeliveringResults from "../components/DeliveringResults"
 import Contact from "../components/Contact"
 import { graphql, useStaticQuery } from "gatsby"
-// import { GatsbyImage, getImage, withArtDirection } from "gatsby-plugin-image"
 
 export const Head = () => (
   <>
@@ -23,36 +21,7 @@ export const Head = () => (
     />
   </>
 )
-export default function Home({ imgData }) {
-  // const [mode, setMode] = useState()
-
-  // const onSelectMode = mode => {
-  //   setMode(mode)
-  // }
-
-  // useEffect(() => {
-  //   // Add listener to update styles
-  //   window
-  //     .matchMedia("(prefers-color-scheme: dark)")
-  //     .addEventListener("change", e =>
-  //       onSelectMode(e.matches ? "dark" : "light")
-  //     )
-
-  //   // Setup dark/light mode for the first time
-  //   onSelectMode(
-  //     window.matchMedia("(prefers-color-scheme: dark)").matches
-  //       ? "dark"
-  //       : "light"
-  //   )
-
-  //   // Remove listener
-  //   return () => {
-  //     window
-  //       .matchMedia("(prefers-color-scheme: dark)")
-  //       .removeEventListener("change", () => {})
-  //   }
-  // }, [])
-
+export default function Home() {
   const data = useStaticQuery(graphql`
     query {
       allFile {

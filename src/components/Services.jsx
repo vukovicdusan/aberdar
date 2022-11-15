@@ -45,7 +45,7 @@ const Services = props => {
             </p>
           </div>
         </div>
-        <div className={`${styles.chairSwitcher} [ switcher ]`}>
+        <div className="switcher">
           <div className="[ stack ] [ stack-space-between ]">
             <p className="text-big">
               Web analytics packages to suit any business.

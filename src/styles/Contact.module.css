@@ -1,12 +1,6 @@
 .contactLogo {
   width: 100%;
 }
-.contactSwitcher {
-  --switcher-gap: min(15vw, 15rem) !important;
-}
-.contactSwitcher > * {
-  flex-basis: calc((35rem - 100%) * 999) !important;
-}
 
 .formStack {
   block-size: 100%;

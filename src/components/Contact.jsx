@@ -5,7 +5,7 @@ import * as styles from "../styles/Contact.module.css"
 const Contact = () => {
   return (
     <Region idProp={"contact"}>
-      <div className={`${styles.contactSwitcher} [ switcher ]`}>
+      <div className="switcher">
         <div className="contact">
           <h2 className="text-big">Contact.</h2>
           <form
