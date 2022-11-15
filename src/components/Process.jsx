@@ -32,7 +32,9 @@ const Process = props => {
           </div>
           <div className="stack">
             <ListComponent items={listItems.successPath}></ListComponent>
-            <button className="[ button ] [ mr-bs-4 ]">Discover More</button>
+            <a href="#contact" className="[ button ] [ mr-bs-4 ]">
+              Discover More
+            </a>
           </div>
         </div>
 

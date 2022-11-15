@@ -65,7 +65,9 @@ const Hero = () => {
             </p>
           </div>
           <div>
-            <button className="button">Book A Free Consultation</button>
+            <a href="#contact" className="button">
+              Book A Free Consultation
+            </a>
           </div>
         </div>
       </div>
