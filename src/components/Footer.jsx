@@ -2,12 +2,12 @@ import React from "react"
 import Region from "./layout/Region"
 import Wrapper from "./layout/Wrapper"
 import * as styles from "../styles/Footer.module.css"
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import mail from "../../static/images/mail.svg"
 import linkedin from "../../static/images/linkedin.svg"
 import skype from "../../static/images/skype.svg"
 
-const Footer = () => {
+const Footer = props => {
   return (
     <footer>
       <Wrapper>
@@ -30,13 +30,11 @@ const Footer = () => {
               </ul>
             </nav>
             <div className={`${styles.footerBottom} [ mr-bs-4 ] [ wrap ]`}>
-              <StaticImage
-                src="../images/logo-black.png"
-                width={45}
-                placeholder="blurred"
-                layout="constrained"
+              <GatsbyImage
+                className="logo"
+                image={props.imgData}
                 alt="logo"
-              ></StaticImage>
+              ></GatsbyImage>
               <div>Terms of Use/Privacy Policy</div>
               <div>
                 <ul className="wrap">

@@ -51,7 +51,6 @@ const Contact = () => {
         <StaticImage
           src="../images/logo-yellow.png"
           placeholder="blurred"
-          layout="fullWidth"
           objectFit="contain"
           alt="logo"
         ></StaticImage>

@@ -47,8 +47,8 @@ const Hero = () => {
           <StaticImage
             src="../images/logo-yellow.png"
             placeholder="blurred"
-            layout="fullWidth"
             alt="logo"
+            objectFit="contain"
           ></StaticImage>
         </div>
         <div className={`${styles.heroBottomRight} [ stack ]`}>

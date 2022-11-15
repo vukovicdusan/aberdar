@@ -336,6 +336,10 @@ label {
 }
 
 /* === UTILITIES === */
+
+.logo {
+  max-inline-size: 45px;
+}
 .wrapper {
   width: 70vw;
   width: clamp(16rem, 93vw, 75rem);
@@ -551,8 +555,8 @@ label {
 
 /** ==== SWITCHER ==== */
 .switcher {
-  --switcher-gap: 15rem !important;
-  --switcher-gap: min(25vw, 15rem) !important;
+  --switcher-gap: 15rem;
+  --switcher-gap: min(15vw, 15rem);
   display: flex;
   flex-wrap: wrap;
   gap: var(--switcher-gap);

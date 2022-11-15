@@ -47,6 +47,7 @@ const Process = props => {
             className={styles.fishImg}
             image={images}
             alt="fish"
+            objectFit="contain"
           ></GatsbyImage>
           <div className="[ stack ] [ big-stack ]">
             <p>

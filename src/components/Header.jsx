@@ -1,21 +1,19 @@
 import React from "react"
 import * as styles from "../styles/Header.module.css"
 import Wrapper from "./layout/Wrapper"
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
-const Header = () => {
+const Header = props => {
   return (
     <header>
       <Wrapper>
         <div className={`${styles.headerWrap} [ wrap ]`}>
           <div>
-            <StaticImage
-              src="../images/logo-black.png"
-              width={45}
-              placeholder="blurred"
-              layout="constrained"
+            <GatsbyImage
+              className="logo"
+              image={props.imgData}
               alt="logo"
-            ></StaticImage>
+            ></GatsbyImage>
           </div>
           <nav>
             <ul className="wrap">

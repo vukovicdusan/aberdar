@@ -54,7 +54,11 @@ const Services = props => {
               We offer a range of services to meet your specific needs:
             </p>
           </div>
-          <GatsbyImage image={images} alt="stolica"></GatsbyImage>
+          <GatsbyImage
+            image={images}
+            alt="stolica"
+            objectFit="contain"
+          ></GatsbyImage>
         </div>
         <div className={`${styles.servicesGrid} [ grid ]`}>
           {servicesContent.map((service, index) => (

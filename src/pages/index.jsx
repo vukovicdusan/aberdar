@@ -59,11 +59,7 @@ export default function Home({ imgData }) {
         nodes {
           name
           childImageSharp {
-            gatsbyImageData(
-              placeholder: BLURRED
-              layout: CONSTRAINED
-              transformOptions: { fit: CONTAIN }
-            )
+            gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
           }
         }
       }
@@ -71,7 +67,7 @@ export default function Home({ imgData }) {
   `)
 
   return (
-    <Layout>
+    <Layout imgData={data}>
       <BackToTop></BackToTop>
       <Hero></Hero>
       <DarkSection></DarkSection>
