@@ -11,6 +11,7 @@ const Contact = () => {
           <form
             action=""
             className={`${styles.formStack} [ stack ] [ mr-bs-4 ]`}
+            data-netlify="true"
           >
             <div className={`${styles.inputsStack} [ stack ]`}>
               <label className="visually-hidden" htmlFor="name">
@@ -44,7 +45,9 @@ const Contact = () => {
                 placeholder="Message"
               />
             </div>
-            <button className="[ button ] [ mr-b-auto ]">Send Email</button>
+            <button className="[ button ] [ mr-b-auto ]">
+              Book A Free Consultation
+            </button>
           </form>
         </div>
 
