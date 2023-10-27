@@ -21,18 +21,15 @@ const AboutMe = () => {
         <div className="big-stack">
           <div className="stack">
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Reiciendis, libero. Ullam error pariatur reiciendis incidunt,
-              asperiores ducimus dolorum iusto voluptatibus tempora maxime sequi
-              excepturi doloribus vel nemo quae odio labore.
-            </p>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque
-              debitis ullam beatae vero quaerat molestiae enim eius veniam
-              pariatur unde eveniet quidem suscipit voluptatibus aspernatur
-              voluptatum saepe vitae quisquam, atque, maiores blanditiis tenetur
-              culpa, eum repudiandae inventore? Quam, necessitatibus
-              voluptatibus.
+              Hey there! I'm Vladimir. I'm a web analytics expert who helps
+              organizations make environments for data-driven decisions. Whether
+              by tracking user behavior, defining KPIs, or improving marketing
+              data collection, I'm passionate about leveraging web analytics to
+              help businesses thrive. <br></br>
+              <br></br>
+              When I'm not tracking what people do on websites, you may find me
+              in my garden growing my spices and stressing about why my chili
+              plants have so few peppers.
             </p>
           </div>
           <p className="text-big">
