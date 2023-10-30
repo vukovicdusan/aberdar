@@ -7,10 +7,10 @@
   font-size: 14px;
 }
 
-.testimonialBox > *:nth-child(1) {
+/* .testimonialBox > *:nth-child(1) {
   line-height: 0.7;
   font-size: calc(var(--s5) + 2rem);
-}
+} */
 
 .testimonialBox::before {
   content: "";

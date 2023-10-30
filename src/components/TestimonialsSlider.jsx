@@ -30,11 +30,11 @@ export default function TestimonialsSlider() {
         {testimonialsData.map((testimonial, index) => (
           <SwiperSlide key={index}>
             <TestimonialBox
-              initials={testimonial.initials}
               content={testimonial.content}
               name={testimonial.name}
               title={testimonial.title}
               position={testimonial.position}
+              logo={testimonial.logo}
             ></TestimonialBox>
           </SwiperSlide>
         ))}
