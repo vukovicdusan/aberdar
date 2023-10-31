@@ -611,6 +611,14 @@ label {
   }
 }
 
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 15px;
+    bottom: revert;
+  }
+}
+
 /* === === */
 @media (prefers-color-scheme: dark) {
   html {
