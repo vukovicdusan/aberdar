@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import * as styles from "../styles/Contact.module.css"
 import { useForm } from "@formspree/react"
 const Contact = () => {
-  const api = process.env.FORMSPREE_API_ENDPOINT
+  const api = process.env.GATSBY_FORMSPREE_API_ENDPOINT
 
   const [state, handleSubmit] = useForm(api)
 
