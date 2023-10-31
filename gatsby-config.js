@@ -17,5 +17,13 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.vladimirmilic.com",
+        sitemap: "https://www.vladimirmilic.com/sitemap.xml",
+        policy: [{ userAgent: "*", disallow: ["/"] }],
+      },
+    },
   ],
 }
