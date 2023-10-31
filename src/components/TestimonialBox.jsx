@@ -15,13 +15,17 @@ const TestimonialBox = props => {
 
   return (
     <div className={`${styles.testimonialBox} [ box ] [ stack ]`}>
-      <GatsbyImage
-        className={styles.testimonialLogo}
-        image={getImage(setImageHandler(props.logo))}
-        placeholder="blurred"
-        alt="logo"
-        objectFit="contain"
-      ></GatsbyImage>
+      {props.logo ? (
+        <GatsbyImage
+          className={styles.testimonialLogo}
+          image={getImage(setImageHandler(props.logo))}
+          placeholder="blurred"
+          alt="logo"
+          objectFit="contain"
+        ></GatsbyImage>
+      ) : (
+        ""
+      )}
       <p>{props.content}</p>
       <p className="text-bold">{props.name + ", " + props.position}</p>
       <p className="[ text-gray ]">{props.title}</p>

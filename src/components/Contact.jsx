@@ -12,7 +12,6 @@ const Contact = () => {
             action=""
             className={`${styles.formStack} [ stack ] [ mr-bs-4 ]`}
             data-netlify="true"
-            netlify
           >
             <div className={`${styles.inputsStack} [ stack ]`}>
               <label className="visually-hidden" htmlFor="name">
