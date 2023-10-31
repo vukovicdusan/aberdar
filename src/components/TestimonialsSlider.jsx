@@ -8,7 +8,7 @@ import testimonialsData from "../../static/TestimonialsData"
 
 import { Navigation } from "swiper"
 
-export default function TestimonialsSlider() {
+export default function TestimonialsSlider(props) {
   return (
     <Region>
       <Swiper
@@ -35,6 +35,7 @@ export default function TestimonialsSlider() {
               title={testimonial.title}
               position={testimonial.position}
               logo={testimonial.logo}
+              imgData={props.imgData}
             ></TestimonialBox>
           </SwiperSlide>
         ))}

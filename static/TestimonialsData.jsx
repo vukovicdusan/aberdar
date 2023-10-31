@@ -34,7 +34,7 @@ const testimonialsData = [
     title: "E-commerce",
   },
   {
-    logo: "brainiumlabs.svg",
+    logo: "brainiumlabs.png",
     content:
       "Vladimir helped us set up some custom Google Data Studio reports from Google Analytics data. He was very prompt, professional, and knowledgeable. Would definitely use him again.",
     name: "Tuan Nguyen",
@@ -50,7 +50,7 @@ const testimonialsData = [
     title: "IT Services",
   },
   {
-    logo: "strategyx-logo.svg",
+    logo: "strategyx-logo.png",
     content: "Vladimir is an excellent consultant to work with.",
     name: "Brett Quinn",
     position: "CEO",
@@ -88,7 +88,7 @@ const testimonialsData = [
     title: "Photography Studio",
   },
   {
-    logo: "elogii.svg",
+    logo: "elogii.png",
     content:
       "Excellent job in helping to set up conversion tracking. Vladimir is a true expert and we would highly recommend him.",
     name: "Andrew Mukerjee",
@@ -104,7 +104,7 @@ const testimonialsData = [
     title: "SaaS",
   },
   {
-    logo: "hallam.svg",
+    logo: "hallam.png",
     content:
       "Vladimir helped me with my project, he was very efficient and delivered his work with high quality",
     name: "Amani Majed",
@@ -112,7 +112,7 @@ const testimonialsData = [
     title: "Digital Marketing Agency",
   },
   {
-    logo: "singularitydao.svg",
+    logo: "singularitydao.png",
     content:
       "Highly skilled in Google Analytics (GA4) and executed the requests in a well-planned and organized manner. I will definitely add Vladimir to my favorite.",
     name: "Jahangeer Ansari",
@@ -120,7 +120,7 @@ const testimonialsData = [
     title: "Web 3 Tokens Exchange Platform",
   },
   {
-    logo: "urth.svg",
+    logo: "urth.png",
     content:
       "Really enjoyed working with Vlad, he is a real expert in his field.",
     name: "Christian Gibson",
@@ -136,7 +136,7 @@ const testimonialsData = [
     title: "Social Network",
   },
   {
-    logo: "tubebuddy.svg",
+    logo: "tubebuddy.png",
     content:
       "Vladimir is my #1 go-to when handling any issues with Google Analytics and Tag Manager. He's professional, quick, and always gets the job done.",
     name: "Joseph Dungan",
@@ -144,7 +144,7 @@ const testimonialsData = [
     title: "Popular YouTube Video Optimization and Management Extension",
   },
   {
-    logo: "avatars.slack-edge-eelon.jpg",
+    logo: "eelon.jpg",
     content:
       "Vlad is great we highly recommend him, it was a pleasure working with him.",
     name: "Jad Kantari",
@@ -208,7 +208,7 @@ const testimonialsData = [
     title: "Wine Club",
   },
   {
-    logo: "dansksejlunion.svg",
+    logo: "dansksejlunion.png",
     content:
       "Vladimir did a great job helping us set up weekly reports via Google Analytics and Google Data Studio. He provided clear communication and reacted swiftly when needed.Thanks",
     name: "Morten Kjems",
@@ -232,7 +232,7 @@ const testimonialsData = [
     title: "Development & Operations Intentional Communities Directory",
   },
   {
-    logo: "marketingastro.svg",
+    logo: "marketingastro.png",
     content:
       "It was a great experience working with Vladimir, I felt safe with my project being in good hands. He explained everything he did in detail, documented everything, and held a demo session about his results. I hope to collaborate with him again in the future. Thanks Vlad!",
     name: "Emilia Gal",
@@ -248,7 +248,7 @@ const testimonialsData = [
     title: "Travel Journal Application",
   },
   {
-    logo: "throttl.svg",
+    logo: "throttl.png",
     content:
       "Vlad was amazing to deal with! He was always on-time in our meetings and have taken really great care of the project. He also took the time to explain everything, making sure I am aware of how each events are being tracked. Would definitely hire again.",
     name: "Christian Lehmann",

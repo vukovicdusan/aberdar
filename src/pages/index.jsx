@@ -42,7 +42,7 @@ export default function Home() {
       <DarkSection></DarkSection>
       <Services imgData={data}></Services>
       <Process imgData={data}></Process>
-      <Testimonials></Testimonials>
+      <Testimonials imgData={data}></Testimonials>
       <DeliveringResults imgData={data}></DeliveringResults>
       <AboutMe></AboutMe>
       <Contact></Contact>

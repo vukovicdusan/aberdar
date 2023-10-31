@@ -2,10 +2,10 @@ import React from "react"
 import Region from "./layout/Region"
 import TestimonialsSlider from "./TestimonialsSlider"
 
-const Testimonials = () => {
+const Testimonials = props => {
   return (
     <Region>
-      <TestimonialsSlider></TestimonialsSlider>
+      <TestimonialsSlider imgData={props.imgData}></TestimonialsSlider>
     </Region>
   )
 }
