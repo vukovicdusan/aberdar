@@ -10,3 +10,7 @@
 .inputsStack {
   inline-size: 100%;
 }
+
+.honeypot {
+  display: none;
+}
