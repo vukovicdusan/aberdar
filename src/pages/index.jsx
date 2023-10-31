@@ -14,10 +14,10 @@ import { graphql, useStaticQuery } from "gatsby"
 
 export const Head = () => (
   <>
-    <title>Aberdar - Web Analytics Consultancy</title>
+    <title>Vladimir Milic - Web Analytics Expert</title>
     <meta
       name="description"
-      content="Aberdar is a top tier web analytics consultancy agency"
+      content="Vladimir is a top tier web analytics consultancy expert"
     />
   </>
 )
