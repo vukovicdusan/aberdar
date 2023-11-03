@@ -10,7 +10,7 @@ const AboutMe = () => {
         <div>
           <StaticImage
             className={styles.aboutMeImg}
-            src="../images/aboutme.jpg"
+            src="../images/aboutme.png"
             width={350}
             placeholder="blurred"
             layout="constrained"
