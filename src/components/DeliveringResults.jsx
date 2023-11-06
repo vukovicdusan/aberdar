@@ -51,7 +51,12 @@ const DeliveringResults = props => {
               Get in touch today to find out how our expert web analytics and
               data services can boost your business.
             </p>
-            <a href="#contact" className="[ button ] [ mr-bs-4 ]">
+            <a
+              rel="noreferer"
+              target="_blank"
+              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0Hcv9_Jz4x9Byfolk-sb6702r8JyWzTVM9EU86cOESDqN2zCRAG2OTdBJw3dWqfAhlQt5FDz7E"
+              className="[ button ] [ mr-bs-4 ]"
+            >
               Book A Call Now
             </a>
           </div>

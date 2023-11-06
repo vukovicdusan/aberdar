@@ -52,14 +52,12 @@ const Contact = () => {
             <input type="text" name="_gotcha" class={styles.honeypot} />
             {state.succeeded ? (
               <p className="text-main">
-                Thank you for your message, I will get back to you asap.
+                Thank you for your message, I will get back to you ASAP.
               </p>
             ) : (
               ""
             )}
-            <button className="[ button ] [ mr-b-auto ]">
-              Book A Free Consultation
-            </button>
+            <button className="[ button ] [ mr-b-auto ]">Send Message</button>
           </form>
         </div>
 
