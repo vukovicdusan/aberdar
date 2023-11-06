@@ -61,7 +61,7 @@ const Process = props => {
             ></ListComponent>
             <p>
               We can define and implement KPI tracking for any type of business
-              - technical or non-tehnical.
+              - technical or non-technical.
             </p>
           </div>
         </div>

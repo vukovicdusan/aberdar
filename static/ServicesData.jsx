@@ -7,12 +7,12 @@ const servicesData = [
   {
     title: "Audit",
     content:
-      "We can carry out audits of you existing web analytics syste, highlighting strengths and weaknesses. We'll recommend improvements that align with industry best practices to help you boost performance and reduce your marketing costs.",
+      "We can carry out audits of you existing web analytics system, highlighting strengths and weaknesses. We'll recommend improvements that align with industry best practices to help you boost performance and reduce your marketing costs.",
   },
   {
     title: "Full web analytics support",
     content:
-      "Our complete package that will take you from intial strategy creation and implementation, through to continous tracking and marketing optimization.",
+      "Our complete package that will take you from initial strategy creation and implementation, through to continuous tracking and marketing optimization.",
   },
 ]
 

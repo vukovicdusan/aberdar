@@ -27,7 +27,7 @@ const listItems = {
     "Server-side Google Tag Manager (SSGTM)",
     "BigQuery (BQ)",
     "Google Sheet/Excel",
-    "Advertising pixesl (Facebook, Google Ads, Bing Ads, LinkedIn, Pinterest, TikTok, etc.)",
+    "Advertising pixels (Facebook, Google Ads, Bing Ads, LinkedIn, Pinterest, TikTok, etc.)",
     "Google Data Studiio (GDS)",
     "JavaScript, SQL",
   ],
