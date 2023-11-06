@@ -2,11 +2,11 @@ import React from "react"
 import Region from "./layout/Region"
 import { StaticImage } from "gatsby-plugin-image"
 import * as styles from "../styles/Contact.module.css"
-import { useForm } from "@formspree/react"
+// import { useForm } from "@formspree/react"
 const Contact = () => {
-  const api = process.env.GATSBY_FORMSPREE_API_ENDPOINT
+  // const api = process.env.GATSBY_FORMSPREE_API_ENDPOINT
 
-  const [state, handleSubmit] = useForm(api)
+  // const [state, handleSubmit] = useForm(api)
 
   return (
     <Region idProp={"contact"}>
@@ -14,7 +14,7 @@ const Contact = () => {
         <div className="contact">
           <h2 className="text-big">Contact.</h2>
           <form
-            onSubmit={handleSubmit}
+            // onSubmit={handleSubmit}
             className={`${styles.formStack} [ stack ] [ mr-bs-4 ]`}
           >
             <div className={`${styles.inputsStack} [ stack ]`}>
@@ -50,13 +50,13 @@ const Contact = () => {
               />
             </div>
             <input type="text" name="_gotcha" class={styles.honeypot} />
-            {state.succeeded ? (
+            {/* {state.succeeded ? (
               <p className="text-main">
                 Thank you for your message, I will get back to you ASAP.
               </p>
             ) : (
               ""
-            )}
+            )} */}
             <button className="[ button ] [ mr-b-auto ]">Send Message</button>
           </form>
         </div>
