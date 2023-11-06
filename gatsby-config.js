@@ -29,8 +29,7 @@ module.exports = {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
         id: "GTM-TJCTN2WM",
-        selfHostedOrigin:
-          "https://load.data.vladimirmilic.com/ns.html?id=GTM-TJCTN2WM",
+        selfHostedOrigin: "https://load.data.vladimirmilic.com/ns.html",
       },
     },
   ],
