@@ -33,7 +33,7 @@ module.exports = {
         // Include GTM in development.
         //
         // Defaults to false meaning GTM will only be loaded in production.
-        includeInDevelopment: false,
+        includeInDevelopment: true,
 
         // datalayer to be set before GTM is loaded
         // should be an object or a function that is executed in the browser
@@ -54,7 +54,8 @@ module.exports = {
         // Defaults to false
         enableWebVitalsTracking: true,
         // Defaults to https://www.googletagmanager.com
-        selfHostedOrigin: "YOUR_SELF_HOSTED_ORIGIN",
+        selfHostedOrigin:
+          "https://load.data.vladimirmilic.com/ns.html?id=GTM-TJCTN2WM",
       },
     },
   ],
