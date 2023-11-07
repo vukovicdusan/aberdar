@@ -25,12 +25,12 @@ module.exports = {
         policy: [{ userAgent: "*", disallow: ["/"] }],
       },
     },
-    {
-      resolve: "gatsby-plugin-google-tagmanager",
-      options: {
-        id: "GTM-TJCTN2WM",
-        selfHostedOrigin: "https://load.data.vladimirmilic.com/ns.html",
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-google-tagmanager",
+    //   options: {
+    //     id: "GTM-TJCTN2WM",
+    //     selfHostedOrigin: "https://load.data.vladimirmilic.com/ns.html",
+    //   },
+    // },
   ],
 }
