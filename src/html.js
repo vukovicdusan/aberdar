@@ -6,8 +6,8 @@ export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
       <head>
-        <Script>
-          {(function (w, d, s, l, i) {
+        <Script id="gtm-script">
+          {`(function (w, d, s, l, i) {
             w[l] = w[l] || []
             w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" })
             var f = d.getElementsByTagName(s)[0],
@@ -17,7 +17,7 @@ export default function HTML(props) {
             j.src =
               "https://load.data.vladimirmilic.com/dxtneslk.js?id=" + i + dl
             f.parentNode.insertBefore(j, f)
-          })(window, document, "script", "dataLayer", "GTM-TJCTN2WM")}
+          })(window, document, "script", "dataLayer", "GTM-TJCTN2WM")`}
         </Script>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
