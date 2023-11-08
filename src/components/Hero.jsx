@@ -66,7 +66,7 @@ const Hero = () => {
           </div>
           <div>
             <a
-              rel="noreferer"
+              rel="noreferrer"
               target="_blank"
               href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0Hcv9_Jz4x9Byfolk-sb6702r8JyWzTVM9EU86cOESDqN2zCRAG2OTdBJw3dWqfAhlQt5FDz7E"
               className="button"

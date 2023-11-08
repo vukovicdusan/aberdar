@@ -81,7 +81,14 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-a {
+.btn-link {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+a,
+.btn-link {
   color: var(--text-primary);
   text-decoration-color: var(--main);
   text-underline-offset: 1px;
@@ -90,7 +97,8 @@ a {
   transition: all 0.3s ease;
 }
 
-a:hover {
+a:hover,
+.btn-link:hover {
   text-decoration: underline;
   text-decoration-color: var(--main);
   text-underline-offset: 2px;

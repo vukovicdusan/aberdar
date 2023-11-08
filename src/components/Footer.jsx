@@ -37,7 +37,7 @@ const Footer = props => {
                 <ul className="wrap">
                   <li>
                     <a
-                      rel="noreferer"
+                      rel="noreferrer"
                       target="_blank"
                       href="https://www.upwork.com/freelancers/milicvladimir"
                     >
@@ -55,7 +55,7 @@ const Footer = props => {
                   </li>
                   <li>
                     <a
-                      rel="noreferer"
+                      rel="noreferrer"
                       target="_blank"
                       href="mailto:vladimirdmilic@gmail.com"
                     >
@@ -71,7 +71,7 @@ const Footer = props => {
                   </li>
                   <li>
                     <a
-                      rel="noreferer"
+                      rel="noreferrer"
                       target="_blank"
                       href="https://www.linkedin.com/in/vladimirmilic/"
                     >

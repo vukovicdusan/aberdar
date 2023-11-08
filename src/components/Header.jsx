@@ -4,6 +4,18 @@ import Wrapper from "./layout/Wrapper"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 const Header = props => {
+  const scrollToElement = elementId => {
+    const targetElement = document.getElementById(elementId)
+
+    if (targetElement) {
+      const offsetTop = targetElement.offsetTop
+      window.scrollTo({
+        top: offsetTop - 50,
+        behavior: "smooth",
+      })
+      console.log(offsetTop)
+    }
+  }
   return (
     <header>
       <Wrapper>
@@ -18,16 +30,36 @@ const Header = props => {
           <nav>
             <ul className="wrap">
               <li>
-                <a href="#services">Services</a>
+                <button
+                  className="btn-link"
+                  onClick={() => scrollToElement("services")}
+                >
+                  Services
+                </button>
               </li>
               <li>
-                <a href="#process">Process</a>
+                <button
+                  className="btn-link"
+                  onClick={() => scrollToElement("process")}
+                >
+                  Process
+                </button>
               </li>
               <li>
-                <a href="#about">About</a>
+                <button
+                  className="btn-link"
+                  onClick={() => scrollToElement("about")}
+                >
+                  About
+                </button>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <button
+                  className="btn-link"
+                  onClick={() => scrollToElement("contact")}
+                >
+                  Contact
+                </button>
               </li>
             </ul>
           </nav>
