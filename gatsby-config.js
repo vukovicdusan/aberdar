@@ -22,7 +22,7 @@ module.exports = {
       options: {
         host: "https://www.vladimirmilic.com",
         sitemap: "https://www.vladimirmilic.com/sitemap.xml",
-        policy: [{ userAgent: "*", disallow: ["/"] }],
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
     // {
